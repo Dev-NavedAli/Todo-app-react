@@ -57,15 +57,15 @@ export default function TodoList(){
             onChange={updateTodoValue} ></input>
             <br /><br />
             <button onClick={addNewTask}>Add a task</button><hr />
-            <br /><br />
+            
             <h4>Task Todo</h4>
             <ul>
                 {
                     todos.map((todo)=>(
                         <li key={todo.id}>
-                        <span style={todo.isDone ? {textDecorationLine:"line-through"}:{}}>{todo.task}</span> &nbsp;
+                        <span style={todo.isDone ? {textDecorationLine:"line-through"}:{}}>{todo.task}</span>&nbsp; 
                         <button onClick={()=>deleteTodo(todo.id)}>delete</button> &nbsp;&nbsp;&nbsp;&nbsp;
-                        <button onClick={()=>MarkAsDone(todo.id)}>Mark As Done</button>
+                        <button onClick={()=>MarkAsDone(todo.id)}>Mark As Done</button><br /><br />
 
                         </li>
                         
